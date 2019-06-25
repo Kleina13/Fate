@@ -30,7 +30,7 @@ async def on_message(message):
     if message.content.startswith('roll'):
         split = message.content.split(' ')
         result = str(throw(1, int(split[1])))
-        print(f"{Fore.LIGHTCYAN_EX + message.author.name + Fore.BLUE} rolled a {Fore.LIGHTCYAN_EX + split[1] + Fore.BLUE} sideddie and gota{Fore.LIGHTCYAN_EX + result}")
+        print(f"{Fore.LIGHTCYAN_EX + message.author.name + Fore.BLUE} rolled a {Fore.LIGHTCYAN_EX + split[1] + Fore.BLUE} sideddie and got a {Fore.LIGHTCYAN_EX + result}")
         await message.channel.send(f"**{message.author.name}** rolled a **{split[1]}** sided die and got a __**{result}**__ from the throw")
 
 client.run(TOKEN)
